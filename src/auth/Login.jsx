@@ -39,9 +39,10 @@ const Login = () => {
   };
 
   return (
-    <div className="flex max-h-screen">
-      <div className="flex flex-1 flex-row items-center justify-center shadow-xl rounded-3xl m-10">
+    <div className="flex min-h-screen">
+      <div className="flex flex-1 flex-row items-center justify-center shadow-xl rounded-3xl m-10 md:mx-20">
         <div className="flex flex-col items-center justify-center w-full sm:w-1/2 my-10 lg:w-1/2">
+        <h1 className="font-bold text-indigo-600 text-3xl p-3">FlexiDocs</h1>
           <h1 className="text-4xl text-black text-center">Welcome Back</h1>
           <p className="text-gray-500 mt-3 text-center">
             Login to manage your documents effortlessly
@@ -57,7 +58,7 @@ const Login = () => {
                 placeholder="Email"
                 value={formData.email}
                 onChange={handleChange}
-                className="w-full px-4 py-2 border rounded-3xl"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg"
               />
             </div>
             <div className="mb-4">
@@ -67,13 +68,13 @@ const Login = () => {
                 placeholder="Password"
                 value={formData.password}
                 onChange={handleChange}
-                className="w-full px-4 py-2 border rounded-3xl"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg"
               />
             </div>
             {error && <p className="text-red-500">{error}</p>}
             <button
               type="submit"
-              className="w-full px-6 py-2 mt-3 bg-black text-white rounded-3xl hover:bg-gray-800 transition"
+              className="w-full px-6 py-2 mt-3 bg-indigo-500 text-white rounded-lg hover:bg-indigo-600 transition"
             >
               Login
             </button>
@@ -81,7 +82,7 @@ const Login = () => {
           <p className="mt-3">
             Don't have an account?{" "}
             <span
-              className="text-blue-500 cursor-pointer"
+              className="text-indigo-500 font-semibold cursor-pointer"
               onClick={() => navigate("/signup")}
             >
               Sign Up

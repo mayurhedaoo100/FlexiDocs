@@ -1,60 +1,60 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { FaUserCircle } from 'react-icons/fa'; // For the profile icon
+import rocketpng from "../assets/rocket.png";
+import { FaUserCircle, FaBitcoin, FaPencilAlt, FaRegFileAlt, FaHeadset, FaFolderOpen, FaCog } from 'react-icons/fa';
 
 const Dashboard = () => {
   return (
-    <div className="flex min-h-screen">
-      {/* Sidebar */}
-      <div className="w-1/5 bg-blue-600 text-white p-4">
-        <div className="text-center mb-8">
-          <h1 className="text-2xl font-bold">HR Doc Gen</h1>
+    <div className='bg-gray-50 min-h-screen'>
+      {/* Navigation Bar */}
+      <nav className="fixed top-0 left-0 w-full p-4 bg-gray-50 shadow-md">
+        <div className="flex justify-between items-center container mx-auto text-gray-800">
+          <div className='flex flex-row items-center'>
+            <FaBitcoin className='text-3xl mr-2 text-gray-700'/>
+            <h1 className="text-xl md:text-3xl font-semibold">FlexiDocs</h1>
+          </div>
+          <button
+            onClick={() => navigate("/profile")}
+            className="text-gray-600 text-4xl hover:text-gray-800 transition-colors"
+          >
+            <FaUserCircle/>
+          </button>
         </div>
-        <nav>
-          <ul className="space-y-4">
-            <li>
-              <Link to="/" className="block py-2 px-4 rounded hover:bg-blue-700">
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link to="/generate-document" className="block py-2 px-4 rounded hover:bg-blue-700">
-                Generate New Document
-              </Link>
-              <ul className="space-y-2 ml-4">
-                <li><Link to="/generate-document/offer-letter" className="block py-2 px-4 hover:bg-blue-800">Offer Letter</Link></li>
-                <li><Link to="/generate-document/salary-slip" className="block py-2 px-4 hover:bg-blue-800">Salary Slip</Link></li>
-                <li><Link to="/generate-document/promotion-letter" className="block py-2 px-4 hover:bg-blue-800">Promotion Letter</Link></li>
-                <li><Link to="/generate-document/experience-letter" className="block py-2 px-4 hover:bg-blue-800">Experience Letter</Link></li>
-              </ul>
-            </li>
-            <li>
-              <Link to="/preview-documents" className="block py-2 px-4 rounded hover:bg-blue-700">
-                Preview Generated Documents
-              </Link>
-            </li>
-          </ul>
-        </nav>
+      </nav>
+
+      <div className='pt-20 mb-6'>
+        <h1 className="text-md text-gray-500 ml-5">Dashboard</h1>
       </div>
 
-      {/* Main Content */}
-      <div className="flex-1 p-8">
-        {/* Header */}
-        <div className="flex justify-between items-center mb-8">
-          <div className="text-xl font-bold text-blue-600">
-            <h1>Welcome to HR Document Generator</h1>
-          </div>
-          <div className="relative">
-            <FaUserCircle className="text-3xl text-gray-600" />
-            {/* You can replace this with the user's profile picture once available */}
+      <div className='flex flex-row'>
+        {/* Sidebar */}
+        <div className='w-1/4 px-6'>
+          <div className='space-y-4'>
+            {[
+              { icon: FaPencilAlt, label: "Create Document" },
+              { icon: FaFolderOpen, label: "My Library" },
+              { icon: FaRegFileAlt, label: "My Templates" },
+              { icon: FaCog, label: "Company Profile" },
+              { icon: FaHeadset, label: "Help Support" },
+            ].map((item, index) => (
+              <div
+                key={index}
+                className='flex items-center text-lg cursor-pointer bg-white p-4 rounded-lg shadow hover:shadow-lg transition-shadow'
+              >
+                <item.icon className='text-indigo-500 mr-3 text-xl' />
+                {item.label}
+              </div>
+            ))}
           </div>
         </div>
 
-        {/* Content (based on current page) */}
-        {/* Here, we can display content based on the route the user is on */}
-        <div>
-          <h2 className="text-2xl font-semibold">Dashboard Content</h2>
-          <p className="mt-4">This is where the main content will be displayed based on the selected action.</p>
+        <div className='flex-1 px-6'>
+          <div className='p-6 bg-white rounded-lg shadow-md flex items-center space-x-4'>
+            <img className='h-16 scale-x-[-1]' src={rocketpng} alt="rocket" />
+            <div>
+              <h1 className='text-2xl font-semibold text-gray-700'>Ready to take off?</h1>
+              <p className='text-lg text-gray-600'>Dive into FlexiDocs and start managing your documents with ease and excitement!</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
