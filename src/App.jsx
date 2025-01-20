@@ -5,6 +5,7 @@ import Dashboard from './pages/Dashboard';
 import Login from './auth/Login';
 import SignUp from './auth/SignUp';
 import GenerateDocument from './pages/GenerateDocument';
+import Templates from './pages/Templates';
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<SignUp />} />
       <Route path="/generate" element={<GenerateDocument/>}/>
+      <Route path="/Templates" element={<Templates/>}/>
     </Routes>
   );
 };
