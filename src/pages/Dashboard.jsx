@@ -1,63 +1,9 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import rocketpng from "../assets/rocket.png";
-import {
-  FaUserCircle,
-  FaBitcoin,
-  FaPencilAlt,
-  FaRegFileAlt,
-  FaHeadset,
-  FaFolderOpen,
-  FaCog,
-} from "react-icons/fa";
 
-const NavigationBar = () => (
-  <nav className="fixed top-0 left-0 w-full bg-white">
-    <div className="flex justify-between items-center container mx-auto p-4">
-      <div className="flex items-center">
-        <FaBitcoin className="text-3xl text-gray-700 mr-2" aria-hidden="true" />
-        <h1 className="text-xl sm:text-2xl font-semibold">FlexiDocs</h1>
-      </div>
-      <button
-        aria-label="Go to Profile"
-        className="text-gray-600 text-3xl sm:text-4xl hover:text-gray-800 transition-colors"
-      >
-        <FaUserCircle />
-      </button>
-    </div>
-  </nav>
-);
-
-const Sidebar = () => {
-
-  const navigate = useNavigate();
-
-  const menuItems = [
-    { icon: FaPencilAlt, label: "Create Document", path: "/GenerateDoc" },
-    { icon: FaFolderOpen, label: "My Library", path: "/Library" },
-    { icon: FaRegFileAlt, label: "My Templates", path: "/Templates" },
-    { icon: FaCog, label: "Company Profile", path: "/CompanyProfile" },
-    { icon: FaHeadset, label: "Help Support", path: "/Support" },
-  ];
-
-  return (
-    <div className="lg:w-1/4 h-full pt-20 px-2 sm:px-4 md:px-6">
-      <div className="space-y-4">
-        {menuItems.map((item, index) => (
-          <div
-          onClick={() => navigate(item.path)}
-            key={index}
-            className="flex items-center text-lg cursor-pointer bg-white p-4 rounded-lg shadow hover:shadow-lg transition-shadow"
-            aria-label={item.label}
-          >
-            <item.icon className="text-indigo-500 sm:mr-3 text-xl" aria-hidden="true" />
-            <p className="hidden sm:block">{item.label}</p>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-};
+import Navbar from "../components/Navbar";
+import Sidebar from "../components/Sidebar";
 
 const DashboardContent = () => (
   <div className="flex-1 bg-gray-100 h-full mt-20 px-4 sm:px-6 rounded-tl-2xl">
@@ -122,10 +68,7 @@ const DashboardContent = () => (
 const DashboardPage = () => {
   return (
     <div className="min-h-screen flex">
-      {/* Navigation Bar */}
-      <NavigationBar />
-
-      {/* Sidebar and Main Content */}
+      <Navbar/>
       <div className="flex flex-1">
         <Sidebar />
         <DashboardContent />

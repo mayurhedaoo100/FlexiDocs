@@ -6,6 +6,9 @@ import Login from './auth/Login';
 import SignUp from './auth/SignUp';
 import GenerateDocument from './pages/GenerateDocument';
 import Templates from './pages/Templates';
+import Library from './pages/Library';
+import Support from './pages/Support';
+import Company from './pages/Company';
 
 const App = () => {
   return (
@@ -14,8 +17,11 @@ const App = () => {
       <Route path="/dashboard" element={<Dashboard />} />
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<SignUp />} />
-      <Route path="/generate" element={<GenerateDocument/>}/>
+      <Route path="/GenerateDoc" element={<GenerateDocument/>}/>
       <Route path="/Templates" element={<Templates/>}/>
+      <Route path="/Library" element={<Library/>}/>
+      <Route path="/Support" element={<Support/>}/>
+      <Route path="/CompanyProfile" element={<Company/>}/>
     </Routes>
   );
 };

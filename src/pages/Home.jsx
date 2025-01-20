@@ -33,7 +33,7 @@ const Home = () => {
           <h1 onClick={() => navigate("/signup")} className="text-base md:text-lg hidden md:block font-semibold mr-5 cursor-pointer hover:text-indigo-600">Signup</h1>
           <h1 onClick={() => navigate("/login")} className="text-base md:text-lg font-semibold mr-5 cursor-pointer hover:text-indigo-600">Login</h1>
           <button
-            onClick={() => navigate("/dashboard")}
+            onClick={() => navigate("/Dashboard")}
             className="border-2 border-indigo-500 text-indigo-500 py-2 px-4 md:px-6 rounded-md font-semibold hover:bg-indigo-100 transition-all"
           >
             Get Started
@@ -49,7 +49,7 @@ const Home = () => {
             Create professional documents effortlessly with our free Document Generator. Save time with pre-designed templates for offer letters, agreements, and more. Simplify your workflow and generate documents in just a few clicks.
           </p>
           <button
-            onClick={() => navigate("/dashboard")}
+            onClick={() => navigate("/Dashboard")}
             className="bg-indigo-500 text-white py-2.5 rounded-md text-sm md:text-lg px-8 md:px-12 font-semibold"
           >
             Get Started
