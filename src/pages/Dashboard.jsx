@@ -6,7 +6,7 @@ import Navbar from "../components/Navbar";
 import Sidebar from "../components/Sidebar";
 
 const DashboardContent = () => (
-  <div className="flex-1 bg-gray-100 h-full mt-20 px-4 sm:px-6 rounded-tl-2xl">
+  <div className="flex-1 bg-gray-100 mt-20 px-6 rounded-tl-2xl h-screen overflow-y-auto">
     {/* Search and Filters */}
     <div className="mt-6 bg-white p-4 rounded-lg">
       <h2 className="text-lg font-semibold text-gray-700 mb-4">

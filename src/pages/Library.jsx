@@ -4,7 +4,7 @@ import Sidebar from '../components/Sidebar'
 
 const LibraryContent = () =>{
     return(
-    <div className="flex-1 bg-gray-100 h-full mt-20 px-4 sm:px-6 rounded-tl-2xl">
+    <div className="flex-1 bg-gray-100 mt-20 px-6 rounded-tl-2xl h-screen overflow-y-auto">
         <p className='m-4 text-gray-600 italic'>Currently no items available in library</p>
         
         </div>
