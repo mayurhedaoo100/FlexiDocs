@@ -50,8 +50,8 @@ const Sidebar = () => {
     {
       iconOutline: CogOutline,
       iconSolid: CogSolid,
-      label: "Company Profile",
-      path: "/CompanyProfile",
+      label: "Company Details",
+      path: "/CompanyDetails",
     },
     {
       iconOutline: SupportOutline,

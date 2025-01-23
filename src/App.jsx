@@ -9,6 +9,7 @@ import Templates from './pages/Templates';
 import Library from './pages/Library';
 import Support from './pages/Support';
 import Company from './pages/Company';
+import Preview from './pages/Preview';
 
 const App = () => {
   return (
@@ -21,7 +22,8 @@ const App = () => {
       <Route path="/Templates" element={<Templates/>}/>
       <Route path="/Library" element={<Library/>}/>
       <Route path="/Support" element={<Support/>}/>
-      <Route path="/CompanyProfile" element={<Company/>}/>
+      <Route path="/CompanyDetails" element={<Company/>}/>
+      <Route path="/preview/:id" element={<Preview />} />
     </Routes>
   );
 };

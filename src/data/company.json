@@ -1,0 +1,10 @@
+[{
+    "name": "Example Company",
+    "logo": "https://img.freepik.com/free-vector/people-silhouette-logo_361591-2448.jpg",
+    "cin": "U12345AB67890",
+    "address": "1234 Street Name, City, State, Zip",
+    "email": "contact@example.com",
+    "hr_email" : "hr@example.com",
+    "phone": "+1 234 567 890",
+    "year" : "2025"
+  }]
