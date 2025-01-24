@@ -30,7 +30,7 @@ const Card = ({ html, title, onPreviewClick }) => {
           dangerouslySetInnerHTML={{ __html: html }}
         />
       </div>
-      <div className="shadow-inner p-2">
+      <div className="shadow-inner p-2 rounded-md">
         <p className="text-md text-center">{title}</p>
         <div className="flex flex-row gap-2 justify-center mt-2">
           <button

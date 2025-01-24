@@ -6,5 +6,8 @@
     "email": "contact@example.com",
     "hr_email" : "hr@example.com",
     "phone": "+1 234 567 890",
-    "year" : "2025"
+    "year" : "2025",
+    "state" : "Maharashtra",
+    "city" : "Nagpur",
+    "zip" : "440006"
   }]
