@@ -5,7 +5,11 @@ import rocketpng from "../assets/rocket.png";
 import Navbar from "../components/Navbar";
 import Sidebar from "../components/Sidebar";
 
-const DashboardContent = () => (
+const DashboardContent = () => {
+
+  const navigate = useNavigate();
+
+  return (
   <div className="flex-1 bg-gray-100 mt-20 px-6 rounded-tl-2xl h-screen overflow-y-auto">
     {/* Search and Filters */}
     <div className="mt-6 bg-white p-4 rounded-lg">
@@ -56,13 +60,14 @@ const DashboardContent = () => (
         <p className="ml-2 text-lg font-semibold text-indigo-500">52</p>
       </div>
       <div className="bg-white py-2 px-4 rounded-lg text-indigo-500 font-semibold text-lg border-2 border-indigo-300 text-center">
-        <button className="w-full sm:w-auto">
+        <button onClick={() => navigate("/GenerateDoc")} className="w-full sm:w-auto">
           Generate New Document
         </button>
       </div>
     </div>
   </div>
-);
+  );
+};
 
 
 const DashboardPage = () => {

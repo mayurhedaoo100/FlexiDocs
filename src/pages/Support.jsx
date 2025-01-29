@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import Navbar from '../components/Navbar';
 import Sidebar from '../components/Sidebar';
 
@@ -20,7 +20,7 @@ const Support = () => {
         <SupportContent/>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default Support;
