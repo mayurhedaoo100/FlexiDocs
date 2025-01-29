@@ -47,7 +47,7 @@ const GenerateDocContent = () => {
 
   const handleEditDocument = () => {
     setIsEditing((prev) => !prev);
-    if (!isEditing) {
+    if (isEditing) {
       // Save the current content when exiting editing mode
       setGeneratedDocument(contentRef.current.innerHTML);
     }
@@ -56,14 +56,23 @@ const GenerateDocContent = () => {
   const handleDownloadPDF = () => {
     if (!generatedDocument) return;
 
+    if (isEditing){
+      alert("Not saved yet");
+    }
+    else{
     const element = document.createElement("div");
     element.innerHTML = generatedDocument;
 
-    html2pdf().from(element).save(`${selectedTemplate.title}.pdf`);
+    html2pdf().from(element).target(pdf) .save(`${selectedTemplate.title}.pdf`);}
   };
 
   const handlePrint = () => {
     if (!generatedDocument) return;
+
+    if (isEditing){
+      alert("Not saved yet");
+      return;
+    }
 
     const printWindow = window.open("", "_blank");
     printWindow.document.write(`

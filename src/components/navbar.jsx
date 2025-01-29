@@ -39,8 +39,8 @@ const Navbar = () => {
           {showDropdown && (
             <div className="absolute right-0 -mt-1 w-48 bg-white border border-gray-200 rounded-lg shadow-lg">
               <div className="p-4">
-                <p className="text-sm font-medium text-gray-700">John Doe</p>
-                <p className="text-xs text-gray-500">johndoe@example.com</p>
+                <p className="text-sm font-medium text-gray-700">Mayur Hedaoo</p>
+                <p className="text-xs text-gray-500">mayurhedaoo100@gmail.com</p>
               </div>
               <hr className="border-gray-200" />
               <button
