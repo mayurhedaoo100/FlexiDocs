@@ -21,7 +21,7 @@ const Library = () => {
         <LibraryContent/>
       </div>
     </div>
-  )
+  );
 };
 
-export default Library
+export default Library;
